@@ -10970,3 +10970,47 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+/* Contenedor general para centrar la línea de tiempo y las flechas */
+.timeline-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Contenedor de la línea de tiempo */
+.timeline-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+.arrow {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 10px;
+}
+.timeline {
+  display: flex;
+  gap: 10px;
+}
+.year {
+  padding: 10px 15px;
+  background-color: #ff69b4;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.active {
+  background-color: #d14792;
+}
+.content {
+  margin-top: 20px;
+}
+
