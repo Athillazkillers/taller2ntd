@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Arqueología - Clarence Taylor</title>
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        /* Asegurar que no haya márgenes en el body y html */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden;
+            background-color: #FFDAB9; /* Tono suave de naranja */
+        }
+        
+        .centered {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .slider-container {
+            height: 300px; /* Ajustar altura adecuada */
+            position: relative;
+            width: 80%;
+            margin: auto;
+            background: black;
+            padding: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .slider-item {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 100%; /* Inicialmente fuera de la vista */
+            transition: left 0.5s ease-in-out, opacity 0.5s ease-in-out;
+            opacity: 0;
+            display: block;
+            text-align: center;
+        }
+        
+        .slider-item.active {
+            left: 0; /* Mover al centro */
+            opacity: 1;
+        }
+        
+        .slider-item img {
+            width: 200px;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+        
+        .slider-btn {
+            z-index: 10; /* Asegurar que las flechas estén encima del slider */
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.5);
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        
+        .prev {
+            left: 10px;
+        }
+        
+        .next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navegación superior -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Clarence Taylor</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="arqueologia.html">Arqueología</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Medicina y Biología</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección de Definición -->
+    <section class="container-fluid mt-5 centered">
+        <div class="bg-warning text-dark p-4 rounded shadow">
+            <h6 class="text-muted">¿Qué es la arqueología?</h6>
+            <p class="mb-0 fw-bold">La arqueología es el estudio de las sociedades pasadas a través de sus restos materiales, permitiéndonos entender su cultura y evolución.</p>
+        </div>
+    </section>
+
+    <!-- Sección de Personajes Importantes -->
+    <section class="py-4 mt-4">
+        <h2 class="text-primary text-center">Personajes Destacados en la Arqueología</h2>
+        <div class="slider-container">
+            <button class="slider-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+            <div class="slider-item active">
+                <img src="https://unaderomanos.wordpress.com/wp-content/uploads/2015/04/herodoto-en-palacio-del-louvre-1806_tcm225-58626.png" alt="Heródoto">
+                <h5 class="text-white">Heródoto</h5>
+                <p class="text-white">Historiador griego considerado el "Padre de la Historia", documentó culturas y lugares antiguos.</p>
+            </div>
+            <div class="slider-item">
+                <img src="https://prensaescuela.es/wp-content/uploads/2008/03/Champollion.jpg" alt="Jean-François Champollion">
+                <h5 class="text-white">Jean-François Champollion</h5>
+                <p class="text-white">Lingüista y egiptólogo francés, descifró la piedra de Rosetta y estableció la base de la egiptología moderna.</p>
+            </div>
+            <div class="slider-item">
+                <h5 class="text-white">Prueba</h5>
+                <p class="text-white">Esta es una diapositiva de prueba en el slider.</p>
+            </div>
+            <button class="slider-btn next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </section>
+
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll(".slider-item");
+
+        function moveSlide(step) {
+            slides[slideIndex].classList.remove("active");
+            let newIndex = (slideIndex + step + slides.length) % slides.length;
+            slides[newIndex].style.left = step > 0 ? "100%" : "-100%";
+            slides[newIndex].classList.add("active");
+            setTimeout(() => {
+                slides[newIndex].style.left = "0";
+                slideIndex = newIndex;
+            }, 50);
+            slideIndex = newIndex;
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
