@@ -11013,4 +11013,42 @@ section.resume-section .resume-section-content {
 .content {
   margin-top: 20px;
 }
+/* correcciones para el codigo*/
+.experience-card {
+  display: flex;
+  align-items: center;
+  background-color: var(--fondo-secundario); /* Mantiene el fondo original */
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
 
+.experience-img {
+  width: 120px; /* Ajusta el tamaño de la imagen */
+  height: 120px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.experience-info {
+  flex-grow: 1;
+}
+
+.experience-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.experience-subheading {
+  font-size: 18px;
+  color: var(--color-principal); /* Mantiene el color principal definido en tu CSS */
+  margin-bottom: 10px;
+}
+
+.experience-card p {
+  font-size: 16px;
+  color: var(--texto-color);
+}
