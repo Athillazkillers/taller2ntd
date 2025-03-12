@@ -11007,12 +11007,7 @@ section.resume-section .resume-section-content {
   border-radius: 5px;
   cursor: pointer;
 }
-.active {
-  background-color: #d14792;
-}
-.content {
-  margin-top: 20px;
-}
+
 
 .personaje {
   display: flex;
