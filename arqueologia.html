@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Arqueología</title>
+    <link href="css/styles2.css" rel="stylesheet" />
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden;
+            background-color: #FFDAB9;
+        }
+        .centered {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .slider-container {
+            height: 400px;
+            position: relative;
+            width: 80%;
+            margin: auto;
+            background: black;
+            padding: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .slider-item {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 100%;
+            transition: left 0.5s ease-in-out, opacity 0.5s ease-in-out;
+            opacity: 0;
+            text-align: center;
+        }
+        .slider-item.active {
+            left: 0;
+            opacity: 1;
+        }
+        .slider-item img {
+            width: 300px;
+            height: auto;
+            display: block;
+            margin: auto;
+            cursor: pointer;
+        }
+        .slider-item p {
+            color: white;
+            margin-top: 10px;
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.5);
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            z-index: 10;
+        }
+        .arrow-left {
+            left: 10px;
+        }
+        .arrow-right {
+            right: 10px;
+        }
+        .info-box {
+            display: none;
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .info-box.active {
+            display: block;
+            opacity: 1;
+        }
+        .info-box img {
+            width: 300px; 
+            height: auto;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"></a>
+           
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="arqueologia.html">Arqueología</a></li>
+                    <li class="nav-item"><a class="nav-link" href="MedicinaBiologia.html">Medicina y Biología</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-4 mt-4">
+        <h2 class="text-primary text-center">Personajes Destacados en la Arqueología</h2>
+        <div class="slider-container">
+            <div class="arrow arrow-left" onclick="prevSlide()">&#9664;</div>
+            <div class="slider-item active" onclick="showInfo('herodoto')">
+                <img src="https://unaderomanos.wordpress.com/wp-content/uploads/2015/04/herodoto-en-palacio-del-louvre-1806_tcm225-58626.png" alt="Heródoto">
+                <p>Heródoto</p>
+            </div>
+            <div class="slider-item" onclick="showInfo('champollion')">
+                <img src="https://www.biografiasyvidas.com/biografia/c/fotos/champollion.jpg" alt="Jean-François Champollion">
+                <p>Jean-François Champollion</p>
+            </div>
+            <div class="slider-item" onclick="showInfo('carter')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJxVs9sQ-48s1Z78XtpHZaG2UHHGoaASZz7w&s" alt="Howard Carter">
+                <p>Howard Carter</p>
+            </div>
+            <div class="slider-item" onclick="showInfo('schmidt')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4bMMAKwhqR4E3PhGtOWYM-Au2cr656h949A&s" alt="Klaus Schmidt">
+                <p>Klaus Schmidt</p>
+            </div>
+            <div class="slider-item" onclick="showInfo('beauchamp')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Pierre_Beauchamp_-_Guest_2006_plate2.jpg/1200px-Pierre_Beauchamp_-_Guest_2006_plate2.jpg" alt="Pierre-Joseph de Beauchamp">
+                <p>Pierre-Joseph de Beauchamp</p>
+            </div>
+            <div class="arrow arrow-right" onclick="nextSlide()">&#9654;</div>
+        </div>
+    </section>
+
+    <div class="info-box" id="infoBox"></div>
+
+    <script src="js/scripts2.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

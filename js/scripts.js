@@ -1,5 +1,3 @@
-
-
 window.addEventListener('DOMContentLoaded', event => {
 
     // Activate Bootstrap scrollspy on the main nav element
@@ -37,7 +35,7 @@ const years = [
   
 ];
 
-let currentIndex = 0;
+//let currentIndex = 0;
 
 function showYear(index) {
     currentIndex = index;
@@ -66,4 +64,3 @@ function move(direction) {
 }
 
 showYear(0);
-
