@@ -82,10 +82,10 @@ function showInfo(person) {
             image: "https://escuelaclinica.lat/wp-content/uploads/LCSA112.jpg",
             text: " se convirtió en uno de los fundadores de la microbiología y el creador de la base científica para la vacunación y las vacunas contra el carbunco, el cólera aviar y la rabia."
         },
-        "pasteur": {
-            name: "Louis Pasteur",
-            image: "https://escuelaclinica.lat/wp-content/uploads/LCSA112.jpg",
-            text: " se convirtió en uno de los fundadores de la microbiología y el creador de la base científica para la vacunación y las vacunas contra el carbunco, el cólera aviar y la rabia."
+        "nightingale": {
+            name: "Florence Nightingale",
+            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/%27One_of_the_wards_in_the_hospital_at_Scutari%27._Wellcome_M0007724_-_restoration%2C_cropped.jpg/330px-%27One_of_the_wards_in_the_hospital_at_Scutari%27._Wellcome_M0007724_-_restoration%2C_cropped.jpg",
+            text: "fue una enfermera, escritora y estadística británica, considerada precursora de la enfermería profesional contemporánea y creadora del primer modelo conceptual de enfermería."
         },
     };
     
