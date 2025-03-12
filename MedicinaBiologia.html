@@ -11,7 +11,7 @@
             padding: 0;
             width: 100%;
             overflow-x: hidden;
-            background-color: #FFDAB9;
+            background-color: #FFFFFF;
         }
         .centered {
             display: flex;
@@ -25,7 +25,7 @@
             position: relative;
             width: 80%;
             margin: auto;
-            background: black;
+            background: #333;
             padding: 20px;
             border-radius: 10px;
             overflow: hidden;
@@ -47,7 +47,7 @@
             opacity: 1;
         }
         .slider-item img {
-            width: 300px;
+            width: 250px;
             height: auto;
             display: block;
             margin: auto;
@@ -78,7 +78,7 @@
             width: 80%;
             margin: 20px auto;
             padding: 20px;
-            background-color: black;
+            background-color: #333;
             color: white;
             text-align: center;
             border-radius: 10px;
@@ -94,10 +94,13 @@
             height: auto;
             margin-bottom: 10px;
         }
+        .navbar {
+            background-color: #D32F2F !important;
+        }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -114,28 +117,32 @@
     </nav>
 
     <section class="py-4 mt-4">
-        <h2 class="text-primary text-center">Personajes Destacados en la Arqueología</h2>
+        <h2 class="text-danger text-center">Personajes Destacados en la Medicina y la Biología</h2>
         <div class="slider-container">
             <div class="arrow arrow-left" onclick="prevSlide()">&#9664;</div>
-            <div class="slider-item active" onclick="showInfo('herodoto')">
-                <img src="https://unaderomanos.wordpress.com/wp-content/uploads/2015/04/herodoto-en-palacio-del-louvre-1806_tcm225-58626.png" alt="Heródoto">
-                <p>Heródoto</p>
+            <div class="slider-item active" onclick="showInfo('darwin')">
+                <img src="https://foroalfa.org/imagenes/ilustraciones/2357.jpg" alt="Darwin">
+                <p>Charles Robert Darwin</p>
             </div>
-            <div class="slider-item" onclick="showInfo('champollion')">
-                <img src="https://www.biografiasyvidas.com/biografia/c/fotos/champollion.jpg" alt="Jean-François Champollion">
-                <p>Jean-François Champollion</p>
+            <div class="slider-item" onclick="showInfo('mendel')">
+                <img src="https://historia.nationalgeographic.com.es/medio/2020/07/17/gregor-mendel_54267c17_550x746.jpg" alt="Mendel">
+                <p>Fraíle Gregor Mendel</p>
             </div>
-            <div class="slider-item" onclick="showInfo('carter')">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJxVs9sQ-48s1Z78XtpHZaG2UHHGoaASZz7w&s" alt="Howard Carter">
-                <p>Howard Carter</p>
+            <div class="slider-item" onclick="showInfo('franklin')">
+                <img src="https://c.files.bbci.co.uk/17B63/production/_124432179_franklin15.jpg" alt="Franklin">
+                <p>Rosalind Franklin</p>
             </div>
-            <div class="slider-item" onclick="showInfo('schmidt')">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4bMMAKwhqR4E3PhGtOWYM-Au2cr656h949A&s" alt="Klaus Schmidt">
-                <p>Klaus Schmidt</p>
+            <div class="slider-item" onclick="showInfo('fleming')">
+                <img src="https://images.squarespace-cdn.com/content/v1/5bf1e2c19d5abbac28975277/1551698573859-D8AM3E40J49LZR14XBDA/Alexander-Fleming_imagen.jpg" alt="Fleming">
+                <p>Alexander Fleming</p>
             </div>
-            <div class="slider-item" onclick="showInfo('beauchamp')">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Pierre_Beauchamp_-_Guest_2006_plate2.jpg/1200px-Pierre_Beauchamp_-_Guest_2006_plate2.jpg" alt="Pierre-Joseph de Beauchamp">
-                <p>Pierre-Joseph de Beauchamp</p>
+            <div class="slider-item" onclick="showInfo('Pasteur')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Louis_Pasteur%2C_foto_av_Paul_Nadar%2C_Crisco_edit.jpg/640px-Louis_Pasteur%2C_foto_av_Paul_Nadar%2C_Crisco_edit.jpg" alt="Pasteur">
+                <p>Louis Pasteur</p>
+            </div>
+            <div class="slider-item" onclick="showinfo('nightingale')">
+                <img src="https://historia.nationalgeographic.com.es/medio/2019/04/25/01-florence-nightingale-enfermera-guerra-crimea_ad3439ed_800x1132.jpg" alt="Nightingale">
+                <p>Florence Nightingale</p>
             </div>
             <div class="arrow arrow-right" onclick="nextSlide()">&#9654;</div>
         </div>
@@ -146,28 +153,3 @@
     <script src="js/scripts.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

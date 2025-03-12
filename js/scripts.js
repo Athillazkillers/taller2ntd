@@ -56,6 +56,11 @@ function showInfo(person) {
             name: "Pierre-Joseph de Beauchamp",
             image: "https://i0.wp.com/viajealpatrimonio.com/wp-content/uploads/2022/06/1116-babilonia.jpg?ssl=1",
             text: "Astrónomo y arqueólogo francés que por primara vez, en 1726, exploró Babilonia y documentó inscripciones cuneiformes, ayudando a descifrar la sociedad mesopotámica."
+        },
+        "darwin": {
+            name: "Charles Robert Darwin",
+            image: "https://bioygeologia.weebly.com/uploads/4/8/2/5/48255833/8502673_orig.jpg",
+            text: "fue un naturalista inglés, reconocido por ser el científico más influyente de los que plantearon la idea de la evolución biológica a través de la selección natural, justificándola en su obra El origen de las especies (1859) con numerosos ejemplos extraídos de la observación de la naturaleza. "
         }
     };
     
