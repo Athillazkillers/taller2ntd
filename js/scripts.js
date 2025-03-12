@@ -61,7 +61,32 @@ function showInfo(person) {
             name: "Charles Robert Darwin",
             image: "https://bioygeologia.weebly.com/uploads/4/8/2/5/48255833/8502673_orig.jpg",
             text: "fue un naturalista inglés, reconocido por ser el científico más influyente de los que plantearon la idea de la evolución biológica a través de la selección natural, justificándola en su obra El origen de las especies (1859) con numerosos ejemplos extraídos de la observación de la naturaleza. "
-        }
+        },
+        "mendel": {
+            name: "Gregor Johann Mendel",
+            image: "https://i.ytimg.com/vi/ubV7BzUsbqc/maxresdefault.jpg",
+            text: "fue un fraile agustino católico y naturalista. Formuló, por medio de los trabajos que llevó a cabo con diversa variedad de guisantes y arvejas, las hoy llamadas leyes de Mendel que dieron origen a la herencia genética. "
+        },
+        "franklin": {
+            name: "Rosalind Franklin",
+            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Rosalind_Franklin.jpg/330px-Rosalind_Franklin.jpg",
+            text: "fue una química y cristalógrafa británica cuyo trabajo fue fundamental para la comprensión de las estructuras moleculares del ácido desoxirribonucleico (ADN), el ácido ribonucleico (ARN), los virus, el carbón y el grafito. "
+        },
+        "fleming": {
+            name: "Alexander Fleming",
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQao9kKf6SxvIV-ZCg7A79f7ApMLVDdaGvWFQ&s",
+            text: "un médico y científico británico famoso por ser el descubridor de la penicilina en 1928, al observar de forma casual sus efectos antibióticos sobre un cultivo bacteriano, fue obtenida a partir del hongo Penicillium notatum. "
+        },
+        "pasteur": {
+            name: "Louis Pasteur",
+            image: "https://escuelaclinica.lat/wp-content/uploads/LCSA112.jpg",
+            text: " se convirtió en uno de los fundadores de la microbiología y el creador de la base científica para la vacunación y las vacunas contra el carbunco, el cólera aviar y la rabia."
+        },
+        "pasteur": {
+            name: "Louis Pasteur",
+            image: "https://escuelaclinica.lat/wp-content/uploads/LCSA112.jpg",
+            text: " se convirtió en uno de los fundadores de la microbiología y el creador de la base científica para la vacunación y las vacunas contra el carbunco, el cólera aviar y la rabia."
+        },
     };
     
     if (info[person]) {
