@@ -10996,10 +10996,7 @@ section.resume-section .resume-section-content {
   border-radius: 50%;
   margin: 10px;
 }
-.timeline {
-  display: flex;
-  gap: 10px;
-}
+
 .year {
   padding: 10px 15px;
   background-color: #ff69b4;
