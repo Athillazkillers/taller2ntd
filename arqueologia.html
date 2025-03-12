@@ -6,15 +6,13 @@
     <title>Arqueología - Clarence Taylor</title>
     <link href="css/styles.css" rel="stylesheet" />
     <style>
-        /* Asegurar que no haya márgenes en el body y html */
         html, body {
             margin: 0;
             padding: 0;
             width: 100%;
             overflow-x: hidden;
-            background-color: #FFDAB9; /* Tono suave de naranja */
+            background-color: #FFDAB9;
         }
-        
         .centered {
             display: flex;
             flex-direction: column;
@@ -22,9 +20,8 @@
             justify-content: center;
             text-align: center;
         }
-        
         .slider-container {
-            height: 300px; /* Ajustar altura adecuada */
+            height: 400px;
             position: relative;
             width: 80%;
             margin: auto;
@@ -36,53 +33,70 @@
             justify-content: center;
             align-items: center;
         }
-        
         .slider-item {
             position: absolute;
             width: 100%;
             top: 0;
-            left: 100%; /* Inicialmente fuera de la vista */
+            left: 100%;
             transition: left 0.5s ease-in-out, opacity 0.5s ease-in-out;
             opacity: 0;
-            display: block;
             text-align: center;
         }
-        
         .slider-item.active {
-            left: 0; /* Mover al centro */
+            left: 0;
             opacity: 1;
         }
-        
         .slider-item img {
             width: 200px;
             height: auto;
             display: block;
             margin: auto;
+            cursor: pointer;
         }
-        
-        .slider-btn {
-            z-index: 10; /* Asegurar que las flechas estén encima del slider */
+        .slider-item p {
+            color: white;
+            margin-top: 10px;
+        }
+        .arrow {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
             background: rgba(255, 255, 255, 0.5);
-            border: none;
             padding: 10px;
             cursor: pointer;
-            font-size: 20px;
+            border-radius: 50%;
+            z-index: 10;
         }
-        
-        .prev {
+        .arrow-left {
             left: 10px;
         }
-        
-        .next {
+        .arrow-right {
             right: 10px;
+        }
+        .info-box {
+            display: none;
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .info-box.active {
+            display: block;
+            opacity: 1;
+        }
+        .info-box img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
-    <!-- Navegación superior -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">Clarence Taylor</a>
@@ -99,66 +113,67 @@
         </div>
     </nav>
 
-    <!-- Sección de Definición -->
-    <section class="container-fluid mt-5 centered">
-        <div class="bg-warning text-dark p-4 rounded shadow">
-            <h6 class="text-muted">¿Qué es la arqueología?</h6>
-            <p class="mb-0 fw-bold">La arqueología es el estudio de las sociedades pasadas a través de sus restos materiales, permitiéndonos entender su cultura y evolución.</p>
-        </div>
-    </section>
-
-    <!-- Sección de Personajes Importantes -->
     <section class="py-4 mt-4">
         <h2 class="text-primary text-center">Personajes Destacados en la Arqueología</h2>
         <div class="slider-container">
-            <button class="slider-btn prev" onclick="moveSlide(-1)">&#10094;</button>
-            <div class="slider-item active">
+            <div class="arrow arrow-left" onclick="prevSlide()">&#9664;</div>
+            <div class="slider-item active" onclick="showInfo('herodoto')">
                 <img src="https://unaderomanos.wordpress.com/wp-content/uploads/2015/04/herodoto-en-palacio-del-louvre-1806_tcm225-58626.png" alt="Heródoto">
-                <h5 class="text-white">Heródoto</h5>
-                <p class="text-white">Historiador griego considerado el "Padre de la Historia", documentó culturas y lugares antiguos.</p>
+                <p>Heródoto</p>
             </div>
-            <div class="slider-item">
-                <img src="https://prensaescuela.es/wp-content/uploads/2008/03/Champollion.jpg" alt="Jean-François Champollion">
-                <h5 class="text-white">Jean-François Champollion</h5>
-                <p class="text-white">Lingüista y egiptólogo francés, descifró la piedra de Rosetta y estableció la base de la egiptología moderna.</p>
+            <div class="slider-item" onclick="showInfo('champollion')">
+                <img src="https://www.biografiasyvidas.com/biografia/c/fotos/champollion.jpg" alt="Jean-François Champollion">
+                <p>Jean-François Champollion</p>
             </div>
-            <div class="slider-item">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCY5ompYn3VZIOh04sXhWlOua9OG5V0RY_eQ&s" alt="Howard Carter">
-                <h5 class="text-white">Howard Carter</h5>
-                <p class="text-white">Arqueólogo y egiptólogo británico, famoso por el descubrimiento de la tumba de Tutankamón en 1922.</p>
+            <div class="slider-item" onclick="showInfo('carter')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJxVs9sQ-48s1Z78XtpHZaG2UHHGoaASZz7w&s" alt="Howard Carter">
+                <p>Howard Carter</p>
             </div>
-            <div class="slider-item">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdaoxveW8wCQJh-YWKslZeBno2mGosGkxqBg&s" alt="Klaus Schmidt">
-                <h5 class="text-white">Klaus Schmidt</h5>
-                <p class="text-white">Arqueólogo y Prehistoriador Alemán, dirigio las excavaciones de Göbekli Tepe</p>
+            <div class="slider-item" onclick="showInfo('schmidt')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4bMMAKwhqR4E3PhGtOWYM-Au2cr656h949A&s" alt="Klaus Schmidt">
+                <p>Klaus Schmidt</p>
             </div>
-            <div class="slider-item">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdaoxveW8wCQJh-YWKslZeBno2mGosGkxqBg&s" alt="Pierre-Joseph de Beauchamp">
-                <h5 class="text-white">Pierre-Joseph de Beauchamp</h5>
-                <p class="text-white">Diplomatico y Astrónomo Alemán, dirigio los primeros sondeos de las ruinas de mesopotamia</p>
+            <div class="slider-item" onclick="showInfo('beauchamp')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Pierre_Beauchamp_-_Guest_2006_plate2.jpg/1200px-Pierre_Beauchamp_-_Guest_2006_plate2.jpg" alt="Pierre-Joseph de Beauchamp">
+                <p>Pierre-Joseph de Beauchamp</p>
             </div>
-            <button class="slider-btn next" onclick="moveSlide(1)">&#10095;</button>
+            <div class="arrow arrow-right" onclick="nextSlide()">&#9654;</div>
         </div>
     </section>
 
-    <script>
-        let slideIndex = 0;
-        const slides = document.querySelectorAll(".slider-item");
+    <div class="info-box" id="infoBox"></div>
 
-        function moveSlide(step) {
-            slides[slideIndex].classList.remove("active");
-            let newIndex = (slideIndex + step + slides.length) % slides.length;
-            slides[newIndex].style.left = step > 0 ? "100%" : "-100%";
-            slides[newIndex].classList.add("active");
-            setTimeout(() => {
-                slides[newIndex].style.left = "0";
-                slideIndex = newIndex;
-            }, 50);
-            slideIndex = newIndex;
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slider-item');
+        const infoBox = document.getElementById('infoBox');
+        
+        const infoData = {
+            herodoto: { text: ""  },
+            champollion: { text: ""  },
+            carter: { text: "" },
+            beauchamp: { text: "" }
+        };
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) slide.classList.add('active');
+            });
         }
+
+        function prevSlide() { currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1; showSlide(currentIndex); }
+        function nextSlide() { currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0; showSlide(currentIndex); }
+        function showInfo(person) { infoBox.innerHTML = `<img src="${infoData[person].img}" alt="${person}"><p>${infoData[person].text}</p>`; infoBox.classList.add('active'); }
     </script>
 </body>
 </html>
+
+
+
+
+
+
 
 
 
