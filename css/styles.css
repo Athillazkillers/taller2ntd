@@ -11014,19 +11014,4 @@ section.resume-section .resume-section-content {
   margin-top: 20px;
 }
 
-.personaje {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
 
-.experience-img {
-  width: 150px; /* Aumenté el tamaño de la imagen */
-  height: auto;
-  margin-right: 20px; /* Un poco más de espacio entre la imagen y el texto */
-  border-radius: 10px; /* Opcional: bordes redondeados para un mejor diseño */
-}
-
-.info {
-  max-width: 700px; /* Ajustado para mantener el equilibrio con la imagen */
-}
