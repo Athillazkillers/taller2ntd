@@ -10944,15 +10944,7 @@ p.lead {
   font-size: 3rem;
 }
 
-section.resume-section {
-  display: flex;
-  align-items: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  max-width: 75rem;
-}
+
 section.resume-section .resume-section-content {
   width: 100%;
 }
@@ -10996,7 +10988,10 @@ section.resume-section .resume-section-content {
   border-radius: 50%;
   margin: 10px;
 }
-
+.timeline {
+  display: flex;
+  gap: 10px;
+}
 .year {
   padding: 10px 15px;
   background-color: #ff69b4;
